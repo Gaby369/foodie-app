@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Booknow from "./pages/Booknow";
 import IniciaraSesion from "./pages/IniciaraSesion";
+import Registrar from "./pages/Registrar";
 
 function App() {
 	return (
@@ -25,7 +26,7 @@ function App() {
 					<Route exact path="/contact" component={Contact} />
 					<Route exact path="/iniciarSesion" component={IniciaraSesion} />
 					<Route exact path="/rooms/iniciarSesion" component={IniciaraSesion} />
-
+					<Route exact path="/registrarse" component={Registrar} />
 					<Route exact path="/rooms/" component={Rooms} />
 					<Route exact path="/rooms/:slug" component={SingleRoom} />
 					<Route exact path="/booknow/:slug" component={Booknow} />
