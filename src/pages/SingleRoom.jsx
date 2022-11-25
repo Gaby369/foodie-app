@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import { RoomContext } from "../context";
 import StyledHero from "../components/StyledHero";
-
+	
 export default class SingleRoom extends Component {
 	constructor(props) {
 		super(props);
@@ -109,10 +109,7 @@ export default class SingleRoom extends Component {
 										Reserva Ahora
 									</Link>
 								) : (
-									<Link
-										to={"iniciarSesion"}
-										className="btn btn-outline-primary btn-block btn-lg float-right "
-									>
+									<Link className="btn btn-outline-primary btn-block btn-lg float-right ">
 										Iniciar Sesion
 									</Link>
 								)}

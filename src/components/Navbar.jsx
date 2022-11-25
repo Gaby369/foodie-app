@@ -72,7 +72,11 @@ const Navbar = () => {
 									Acerca de Nosotros
 								</NavLink>
 							</li>
-							<li className="nav-item">
+							
+
+							{!active ? (
+								<>
+								<li className="nav-item">
 								<NavLink
 									className="nav-link"
 									activeClassName="active_class"
@@ -82,9 +86,6 @@ const Navbar = () => {
 									Contáctenos
 								</NavLink>
 							</li>
-
-							{!active ? (
-								<>
 									<li className="nav-item">
 										<NavLink
 											className="nav-link"

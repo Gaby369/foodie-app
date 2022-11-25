@@ -1,9 +1,12 @@
 import React from "react";
 import firebaseApp from "../config/credentials";
+import {useHistory} from "react-router-dom";
+
 
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 const Contact = () => {
+	const history = useHistory();
 	const firestore = getFirestore(firebaseApp);
 
 	const registerMesage = async (name, email, message,phone) => {
@@ -30,6 +33,7 @@ const Contact = () => {
 		console.log("message", message);
 		console.log("phone", phone);
 		registerMesage(name, email, message,phone);
+		history.push("/about");
 	};
 	return (
 		<div className="container contact">
