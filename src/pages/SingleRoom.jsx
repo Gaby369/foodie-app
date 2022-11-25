@@ -109,7 +109,7 @@ export default class SingleRoom extends Component {
 										Reserva Ahora
 									</Link>
 								) : (
-									<Link className="btn btn-outline-primary btn-block btn-lg float-right ">
+									<Link className="btn btn-outline-primary btn-block btn-lg float-right " to="/rooms/iniciarSesion">
 										Iniciar Sesion
 									</Link>
 								)}

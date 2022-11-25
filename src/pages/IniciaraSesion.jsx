@@ -3,10 +3,12 @@ import "../styles/IniciarSesion.css";
 import firebaseApp from "../config/credentials";
 // import { Link } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useHistory } from "react-router-dom";
 
 const auth = getAuth(firebaseApp);
 
 const IniciaraSesion = () => {
+	const history = useHistory();
 	// const navigate = useNavigate()
 	// const [userState, setUserState] = useState(true);
 	const submitHandler = (event) => {
@@ -18,6 +20,7 @@ const IniciaraSesion = () => {
 		console.log("password", password);
 
 		signInWithEmailAndPassword(auth, email, password);
+		history.push("/rooms");
 	};
 	return (
 		<div className="container form-login">

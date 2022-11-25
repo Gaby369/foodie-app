@@ -4,10 +4,12 @@ import firebaseApp from "../config/credentials";
 // import { Link } from "react-router-dom";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
+import { useHistory } from "react-router-dom";
 
 const auth = getAuth(firebaseApp);
 
 const Registrar = () => {
+	const history = useHistory();
 	const firestore = getFirestore(firebaseApp);
 	// const navigate = useNavigate()
 	const registerUser = async (email, password, rol, name) => {
@@ -34,6 +36,7 @@ const Registrar = () => {
 		const rol = "comensal";
 		const name = event.target.name.value;
 		registerUser(email, password, rol, name);
+		history.push("/rooms");
 	};
 
 	return (

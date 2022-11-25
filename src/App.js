@@ -14,11 +14,7 @@ import Contact from "./pages/Contact";
 import Booknow from "./pages/Booknow";
 import IniciaraSesion from "./pages/IniciaraSesion";
 import Registrar from "./pages/Registrar";
-import UserContext from "./context/UserContext";
-import { useContext } from "react";
-
 function App() {
-	const { active } = useContext(UserContext);
 	return (
 		<div className="App">
 			<BrowserRouter>
@@ -26,17 +22,15 @@ function App() {
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route exact path="/about" component={About} />
-					<Route exact path="/rooms/" component={Rooms} />
+					<Route exact path="/rooms/iniciarSesion" component={IniciaraSesion} />
+					<Route exact path="/rooms" component={Rooms} />
 					<Route exact path="/rooms/:slug" component={SingleRoom} />
 					<Route exact path="/booknow/:slug" component={Booknow} />
+					<Route exact path="/contact" component={Contact} />
+					<Route exact path="/iniciarSesion" component={IniciaraSesion} />
 
-					{!active ? (
-						<>
-							<Route exact path="/contact" component={Contact} />
-							<Route exact path="/iniciarSesion" component={IniciaraSesion} />
-							<Route exact path="/registrarse" component={Registrar} />
-						</>
-					):null}
+					<Route exact path="/registrarse" component={Registrar} />
+
 					<Route component={Error} />
 				</Switch>
 				<Footer />
