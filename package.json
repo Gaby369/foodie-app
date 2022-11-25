@@ -24,9 +24,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "gen:theme-typings": "chakra-cli tokens <path/to/your/theme.(js|ts)>",
-    "postinstall": "npm run gen:theme-typings"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@chakra-ui/cli": "^1.9.0"
   }
 }
