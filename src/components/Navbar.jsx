@@ -101,7 +101,7 @@ const Navbar = () => {
 											className="nav-link"
 											activeClassName="active_class"
 											exact
-											to="/iniciarSesion"
+											to="/registrarse"
 										>
 											Registrarse
 										</NavLink>
