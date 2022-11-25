@@ -13,29 +13,28 @@ import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Booknow from "./pages/Booknow";
 import IniciaraSesion from "./pages/IniciaraSesion";
-import { UserProvider } from "./providers/UserProvider";
 
 function App() {
-  return (
-    <div className="App">
-      <UserProvider>
-        <BrowserRouter>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/iniciarSesion" component={IniciaraSesion} />
-            <Route exact path="/rooms/" component={Rooms} />
-            <Route exact path="/rooms/:slug" component={SingleRoom} />
-            <Route exact path="/booknow/:slug" component={Booknow} />
-            <Route component={Error} />
-          </Switch>
-          <Footer />
-        </BrowserRouter>
-      </UserProvider>
-    </div>
-  );
+	return (
+		<div className="App">
+			<BrowserRouter>
+				<Navbar />
+				<Switch>
+					<Route exact path="/" component={Home} />
+					<Route exact path="/about" component={About} />
+					<Route exact path="/contact" component={Contact} />
+					<Route exact path="/iniciarSesion" component={IniciaraSesion} />
+					<Route exact path="/rooms/iniciarSesion" component={IniciaraSesion} />
+
+					<Route exact path="/rooms/" component={Rooms} />
+					<Route exact path="/rooms/:slug" component={SingleRoom} />
+					<Route exact path="/booknow/:slug" component={Booknow} />
+					<Route component={Error} />
+				</Switch>
+				<Footer />
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

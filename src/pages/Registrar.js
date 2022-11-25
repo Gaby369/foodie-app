@@ -6,19 +6,9 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const auth = getAuth(firebaseApp);
 
-const IniciaraSesion = () => {
+const Registrar = () => {
 	// const navigate = useNavigate()
-	// const [userState, setUserState] = useState(true);
-	const submitHandler = (event) => {
-		event.preventDefault();
-		const email = event.target.email.value;
-		const password = event.target.password.value;
-		//redriect to home react router v5
-		console.log("email", email);
-		console.log("password", password);
 
-		signInWithEmailAndPassword(auth, email, password);
-	};
 	return (
 		<div className="container form-login">
 			<div className="row">
@@ -28,7 +18,16 @@ const IniciaraSesion = () => {
 							<h5 className="card-title text-center mb-5 fw-light fs-5">
 								Iniciar Sesion
 							</h5>
-							<form onSubmit={submitHandler}>
+							<form>
+								<div className="form-floating mb-3">
+									<input
+										type="Nombre"
+										className="form-control"
+										id="name"
+										placeholder="Nombre Apellido"
+									/>
+									<label>Correo Electronico</label>
+								</div>
 								<div className="form-floating mb-3">
 									<input
 										type="email"
@@ -80,4 +79,4 @@ const IniciaraSesion = () => {
 	);
 };
 
-export default IniciaraSesion;
+export default Registrar;
