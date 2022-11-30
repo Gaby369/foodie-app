@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import { RoomContext } from "../context";
 import StyledHero from "../components/StyledHero";
-	
+
 export default class SingleRoom extends Component {
 	constructor(props) {
 		super(props);
@@ -74,7 +74,7 @@ export default class SingleRoom extends Component {
 						})}
 					</div>
 					<div className="single-room-info">
-						<article className="desc">
+						<article className="desc texto-justificado">
 							<h3>Acerca de Nosotros</h3>
 							<p>{description}</p>
 						</article>
@@ -109,7 +109,10 @@ export default class SingleRoom extends Component {
 										Reserva Ahora
 									</Link>
 								) : (
-									<Link className="btn btn-outline-primary btn-block btn-lg float-right " to="/rooms/iniciarSesion">
+									<Link
+										className="btn btn-outline-primary btn-block btn-lg float-right "
+										to="/rooms/iniciarSesion"
+									>
 										Iniciar Sesion
 									</Link>
 								)}

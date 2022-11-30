@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Booknow from "./pages/Booknow";
 import IniciaraSesion from "./pages/IniciaraSesion";
 import Registrar from "./pages/Registrar";
+import PoliCondi from "./components/PoliCondi";
 function App() {
 	return (
 		<div className="App">
@@ -28,7 +29,7 @@ function App() {
 					<Route exact path="/booknow/:slug" component={Booknow} />
 					<Route exact path="/contact" component={Contact} />
 					<Route exact path="/iniciarSesion" component={IniciaraSesion} />
-
+					<Route exact path="/politicas-usos" component={PoliCondi} />
 					<Route exact path="/registrarse" component={Registrar} />
 
 					<Route component={Error} />
